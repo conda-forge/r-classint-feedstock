@@ -1,4 +1,4 @@
-{% set version = "0.4-3" %}
+{% set version = "0.4-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/classInt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/classInt/classInt_{{ version }}.tar.gz
-  sha256: 9ede7a2a7a6b6c114919a3315a884fb592e33b037a50a4fe45cbd4fe2fc434ac
+  sha256: a30e3a8987ce133944897100ab5bdc31b019d897969c452c3795f50ac234606e
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
