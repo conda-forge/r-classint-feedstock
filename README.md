@@ -3,6 +3,7 @@ About r-classint-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-classint-feedstock/blob/main/LICENSE.txt)
 
+
 About r-classint
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/r-spatial/classInt/
 Package license: GPL-2.0-or-later
 
 Summary: Selected commonly used methods for choosing univariate class intervals for mapping or other graphics purposes.
+
 About r-classint
 ----------------
 
