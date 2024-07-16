@@ -1,6 +1,5 @@
 {% set version = "0.4-10" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-classint
@@ -13,8 +12,7 @@ source:
   sha256: c3561eafbc493ac02840191d4f1e4d2ef437ca8eb20f41fc5eca28f00ee42b8b
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,7 +24,9 @@ requirements:
     - r-class                    # [build_platform != target_platform]
     - r-e1071                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem        # [win]
@@ -41,7 +41,6 @@ requirements:
     - r-e1071
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-kernsmooth
     - r-class
     - r-e1071
