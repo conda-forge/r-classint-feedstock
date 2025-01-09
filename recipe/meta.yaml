@@ -1,4 +1,4 @@
-{% set version = "0.4-10" %}
+{% set version = "0.4-11" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/classInt_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/classInt/classInt_{{ version }}.tar.gz
-  sha256: c3561eafbc493ac02840191d4f1e4d2ef437ca8eb20f41fc5eca28f00ee42b8b
+  sha256: 8d366844cf7f951cc5b65423c3ccf50ebc3c11cf9d1fc90f8208e7d869c5d0a6
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
